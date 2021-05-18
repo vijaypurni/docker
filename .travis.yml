@@ -5,8 +5,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t vijaypurni/docker -f dockerfile.dev .
+  - docker build -t testme -f dockerfile.dev .
 
 script:
-  - docker run -e CI=true vijaypurni/docker npm run test
+  - docker run -e CI=true testme npm run test
 
