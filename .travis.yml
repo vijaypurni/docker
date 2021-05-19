@@ -7,6 +7,9 @@ services:
 before_install:
   - docker build -t testme -f dockerfile.dev .
 
-script:
-  - docker run testme npm run test -- --coverage
+script:  
+  - docker run -e CI=true testme npm run test
+
+  
+  
 
