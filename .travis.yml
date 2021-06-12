@@ -8,8 +8,4 @@ before_install:
   - docker build -t testme -f dockerfile.dev .
 
 script:  
-  - docker run -e CI=true testme npm run test
-
-  
-  
-
+  - docker run testme npm run -- --coverage
